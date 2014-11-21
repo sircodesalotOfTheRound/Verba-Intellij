@@ -1,3 +1,5 @@
+package com.verba.plugin;
+
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.verba.language.build.buildtools.Build;
@@ -10,10 +12,6 @@ import org.apache.xerces.util.SymbolTable;
 public class MyAction extends AnAction {
   @Override
   public void actionPerformed(AnActionEvent e) {
-    Build build = Build.fromString("fn function() { }");
 
-    for (SymbolTableEntry entry : build.symbolTable().entries()) {
-      System.out.println(entry.fqn());
-    }
   }
 }
