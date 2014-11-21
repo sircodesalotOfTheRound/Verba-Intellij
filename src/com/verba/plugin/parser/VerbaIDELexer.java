@@ -3,6 +3,9 @@ package com.verba.plugin.parser;
 import com.intellij.lexer.Lexer;
 import com.intellij.lexer.LexerPosition;
 import com.intellij.psi.tree.IElementType;
+import com.verba.language.build.buildtools.Build;
+import com.verba.language.parsing.VerbaMemoizingLexer;
+import com.verba.language.parsing.codestream.StringBasedCodeStream;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -10,11 +13,12 @@ import org.jetbrains.annotations.Nullable;
  * Created by sircodesalot on 14/11/21.
  */
 public class VerbaIDELexer extends Lexer {
-  private CharSequence buffer;
+  private VerbaMemoizingLexer lexer;
 
   @Override
   public void start(@NotNull CharSequence buffer, int startOffset, int endOffset, int initialState) {
-    this.buffer = buffer;
+    StringBasedCodeStream codeStream = new StringBasedCodeStream("codefile", buffer.toString());
+    this.lexer = new VerbaMemoizingLexer("codefile", codeStream);
   }
 
   @Override
@@ -25,13 +29,17 @@ public class VerbaIDELexer extends Lexer {
   public IElementType getTokenType() { return null; }
 
   @Override
-  public int getTokenStart() { return 0; }
+  public int getTokenStart() { return lexer.current().absolutePosition(); }
 
   @Override
   public int getTokenEnd() { return 0; }
 
   @Override
-  public void advance() {  }
+  public void advance() {
+    if (lexer.notEOF()) {
+      this.lexer.advance();
+    }
+  }
 
   @NotNull
   @Override
