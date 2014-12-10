@@ -1,4 +1,4 @@
-package com.verba.plugin.language;
+package com.verba.plugin.language.files;
 
 import com.intellij.openapi.fileTypes.FileTypeConsumer;
 import com.intellij.openapi.fileTypes.FileTypeFactory;

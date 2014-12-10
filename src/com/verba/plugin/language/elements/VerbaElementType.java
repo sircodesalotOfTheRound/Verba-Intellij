@@ -1,11 +1,9 @@
-package com.verba.plugin.elements;
+package com.verba.plugin.language.elements;
 
-import com.intellij.lang.Language;
 import com.intellij.psi.tree.IElementType;
-import com.verba.plugin.language.VerbaLanguage;
+import com.verba.plugin.language.files.VerbaLanguage;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 /**
  * Created by sircodesalot on 14/11/21.

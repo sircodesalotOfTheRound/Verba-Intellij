@@ -1,8 +1,6 @@
-package com.verba.plugin.language;
+package com.verba.plugin.language.files;
 
 import com.intellij.lang.Language;
-import org.jetbrains.annotations.NonNls;
-import org.jetbrains.annotations.NotNull;
 
 /**
  * Created by sircodesalot on 14/11/21.

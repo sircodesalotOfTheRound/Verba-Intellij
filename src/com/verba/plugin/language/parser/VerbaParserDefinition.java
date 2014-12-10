@@ -1,4 +1,4 @@
-package com.verba.plugin.parser;
+package com.verba.plugin.language.parser;
 
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.ParserDefinition;
@@ -10,9 +10,8 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.tree.IFileElementType;
 import com.intellij.psi.tree.TokenSet;
-import com.verba.plugin.language.VerbaFileType;
-import com.verba.plugin.language.VerbaLanguage;
-import com.verba.plugin.language.VerbaPsiFile;
+import com.verba.plugin.language.files.VerbaLanguage;
+import com.verba.plugin.language.files.VerbaPsiFile;
 import org.jetbrains.annotations.NotNull;
 
 /**

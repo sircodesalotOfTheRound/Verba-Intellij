@@ -1,4 +1,4 @@
-package com.verba.plugin.parser;
+package com.verba.plugin.language.parser;
 
 import com.intellij.lang.ASTNode;
 import com.intellij.lang.PsiBuilder;

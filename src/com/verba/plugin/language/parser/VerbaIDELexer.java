@@ -1,11 +1,10 @@
-package com.verba.plugin.parser;
+package com.verba.plugin.language.parser;
 
 import com.intellij.lexer.Lexer;
 import com.intellij.lexer.LexerPosition;
 import com.intellij.psi.tree.IElementType;
-import com.verba.language.build.buildtools.Build;
-import com.verba.language.parsing.VerbaMemoizingLexer;
-import com.verba.language.parsing.codestream.StringBasedCodeStream;
+import com.verba.language.parse.codestream.StringBasedCodeStream;
+import com.verba.language.parse.lexing.VerbaMemoizingLexer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 

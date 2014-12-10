@@ -1,10 +1,8 @@
-package com.verba.plugin.language;
+package com.verba.plugin.language.files;
 
 import com.intellij.extapi.psi.PsiFileBase;
-import com.intellij.lang.Language;
 import com.intellij.openapi.fileTypes.FileType;
 import com.intellij.psi.FileViewProvider;
-import com.intellij.psi.PsiFile;
 import org.jetbrains.annotations.NotNull;
 
 /**

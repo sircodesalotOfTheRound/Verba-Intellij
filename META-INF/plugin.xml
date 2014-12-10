@@ -25,10 +25,10 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
-    <fileTypeFactory implementation="com.verba.plugin.language.VerbaFileTypeFactory" id="Verba.FileTypeFactory" />
+    <fileTypeFactory implementation="com.verba.plugin.language.files.VerbaFileTypeFactory" id="Verba.FileTypeFactory" />
     <lang.parserDefinition id="Verba.Language.ParserDef"
                            language="Verba.Language"
-                           implementationClass="com.verba.plugin.parser.VerbaParserDefinition" />
+                           implementationClass="com.verba.plugin.language.parser.VerbaParserDefinition" />
   </extensions>
 
   <application-components>
